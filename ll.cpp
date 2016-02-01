@@ -1,10 +1,15 @@
 #include <iostream>
 using namespace std;
+
+//Josh Komie
+//linked list practice
+
 struct node
 {
 	int data;
 	struct node *next;
 };
+
 int InitNode(node **n, int data)
 {
 	(*n) = new node;
@@ -14,6 +19,7 @@ int InitNode(node **n, int data)
 	(*n)->next = nullptr;
 	return 1;
 }
+
 int InsertEnd(node **root, int data)
 {
 	node *newNode, *current;
@@ -34,6 +40,7 @@ int InsertEnd(node **root, int data)
 	}
 	return 1;
 }
+
 int InsertBeginning(node **root, int data)
 {
 	node *newNode;
@@ -46,6 +53,7 @@ int InsertBeginning(node **root, int data)
 	(*root) = newNode;
 	return 1;
 }
+
 int InsertMid(node **root, int data, int position)
 {
 	node *newNode, *temp;
@@ -81,6 +89,7 @@ int InsertMid(node **root, int data, int position)
 	}
 	return 1;
 }
+
 int InsertOrdered(node **root, int data)
 {
 	node *newNode, *current, *prev;
